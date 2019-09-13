@@ -1,0 +1,9 @@
+\begin{equation}
+Q_{out}(t)=
+\begin{cases}
+100(t-48.8),\qquad 100n<t\leq 100n+0.2\\
+20, \qquad 100n+0.2<t\leq 100n+2.2\\
+100(51.2-t), \qquad 100n+2.2<t\leq 100n+2.4\\
+0, \qquad 100n+2.4<t\leq 100(n+1)
+\end{cases}
+\end{equation}

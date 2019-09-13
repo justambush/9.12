@@ -21,7 +21,7 @@
 \membera{于欣雨}
 \memberb{杨雨民}
 \memberc{陈城钰}
-\supervisor{贾万涛1}
+\supervisor{贾万涛}
 \yearinput{2019}
 \monthinput{09}
 \dayinput{15}
@@ -150,7 +150,7 @@ dp=\frac{E(P)}{\rho}d\rho
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=.45\textwidth]{pd.png}
+	\includegraphics[width=.8\textwidth]{pd.png}
 	\caption{密度与压力关系}\label{4}
 \end{figure}
 
@@ -166,17 +166,17 @@ Q_{out}=Q_{out}(t)
 \begin{equation}
 s_{1}(t)=
 \begin{cases}
-1,\qquad n(t_{1}+10)< t_{1} \leq (n+1)t_{1}+10n,\qquad n=0,1,2,3,......\\
-0,\qquad (n+1)t_{1}+10n < t_{1} \leq (n+1)(t_{1}+10),\qquad n=0,1,2,3,......
+1,\qquad n(t_{1}+10)< t_{1} \leq (n+1)t_{1}+10n,& n=0,1,2,3,......\\
+0,\qquad (n+1)t_{1}+10n < t_{1} \leq (n+1)(t_{1}+10),& n=0,1,2,3,......
 \end{cases}
 \end{equation}
 \begin{equation}
 Q_{out}(t)=
 \begin{cases}
-100t,\qquad 100n<t\leq 100n+0.2\\
-20, \qquad 100n+0.2<t\leq 100n+2.2\\
-100(2.4-t), \qquad 100n+2.2<t\leq 100n+2.4\\
-0, \qquad 100n+2.4<t\leq 100(n+1)
+100(t-48.8-100n),& 100n+48.8<t\leq 100n+49\\
+20, & 100n+49<t\leq 100n+51\\
+100(51.2-t+100n), & 100n+51<t\leq 100n+51.2\\
+0, & 100n+51.2<t\leq 100n+148.8
 \end{cases}
 \end{equation}
 高压油管内部体积保持恒定，根据质量守恒定律，得：
@@ -195,11 +195,49 @@ P=P(t)
 	
 	
 \subsubsection{单向阀开启控制方案}
+\noindent
+\textbf{第1问}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{mnt.png}
+	\caption{1.1模拟图}\label{5}
+\end{figure}
+
+	$t_{1}=0.2857ms$
 	
+\noindent
+\textbf{第2问:2s}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{q1-2.png}
+	\caption{1.2(2s)模拟图}\label{6}
+\end{figure}
+
+$t_{1}=0.9512$
+
+\noindent
+\textbf{第2问:5s}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{q1-3.png}
+	\caption{1.2(5s)模拟图}\label{7}
+\end{figure}
+
+$t_{1}=0.7571$
+
+\noindent
+\textbf{第2问:10s}
 	
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{q1-4.png}
+	\caption{1.2(5s)模拟图}\label{8}
+\end{figure}
 
-
-
+$t_{1}=0.7560$
 
 
 
@@ -218,6 +256,7 @@ P=P(t)
 \item 本文能有效量化标价及距离对任务完成情况的影响。 
 \item 在设计定价方案时，对个体行为进行了分析，使得出的标价与任务完成情况之 间的关系更加合理
 \end{enumerate}
+
 \subsection{模型的缺点}
 \begin{enumerate}
 \item 在分析定价规律时，仅从宏观角度考虑影响定价的因素，还需从任务点区域的 经济水平、交通状况等角度综合考虑对任务定价的影响。 
